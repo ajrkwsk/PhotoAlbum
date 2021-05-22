@@ -5,8 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photo Album</title>
+    <script src="https://kit.fontawesome.com/bd2357e533.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    
+    <header>
+        <h1><i class="fas fa-camera-retro"></i> MyPhotoAlbum</h1>
+        <div class="icon">
+            <button class="add-btn">dodaj zdjęcie</button>
+            <button class="deteleAll-btn">usuń wszystko</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="photo-area">
+            <div class="photo">
+                <div class="photo-header">
+                    <h2 class="photo-title">Podróż#1</h2>
+                    <i class="far fa-times-circle"></i>
+                </div>
+                <div class="photo-body">
+                    <p class="country">Państwo: Indie</p>
+                    <p class="city">Miasto: New Delhi</p>
+                    <p class="date">Data: 17-10-2018</p>
+                    <img src="https://cdn.pixabay.com/photo/2019/03/09/21/30/downtown-4045036_960_720.jpg" alt="zdjęcie">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="photo-panel">
+                <h3>Dodaj nową podróż</h3>
+                <input type="text" placeholder="podaj tytuł" required><br>
+                <input type="text" placeholder="podaj kraj" required><br>
+                <input type="text" placeholder="podaj miasto" required><br>
+                <input type="date" placeholder="podaj datę" required><br>
+                <input type="file">
+
+                <p class="error">Uzupełnij wszystkie pola</p>
+                <div class="photo-icons">
+                    <button class="save-btn">Zapisz</button>
+                    <button class="cancel-btn">Anuluj</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="./js/script.js"></script>
 </body>
 </html>
