@@ -8,9 +8,10 @@
     <script src="https://kit.fontawesome.com/bd2357e533.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
     <header>
-        <h1><i class="fas fa-camera-retro"></i> MyPhotoAlbum</h1>
+        <h1 class="title"><i class="fas fa-camera-retro"></i> MyPhotoAlbum</h1>
         <div class="icon">
             <button class="add-btn">dodaj zdjęcie</button>
             <button class="deleteAll-btn">usuń wszystko</button>
@@ -47,12 +48,11 @@
                     <option value="Australia">Australia</option>
                     <option value="Antarktyda">Antarktyda</option>
                 </select>
-                <input id="country" type="text" placeholder="podaj państwo" required><br>
-                <input id="city" type="text" placeholder="podaj miasto" required><br>
-                <input id="date" type="date" required><br>
+                <input id="country" type="text" placeholder="podaj państwo"><br>
+                <input id="city" type="text" placeholder="podaj miasto"><br>
+                <input id="date" type="date"><br>
                 <input id="file" type="file" accept="image/*" onchange="previewFile()">
                 <div class="image-box"></div>
-
                 <p class="error">Musisz wypełnić wszystkie pola!</p>
                 <div class="photo-icons">
                     <button class="save-btn">Zapisz</button>
