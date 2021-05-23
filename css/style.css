@@ -30,7 +30,8 @@ button {
     border-radius: 5px;
 }
 
-.photo-area {
+.photo {
+    display: inline-block;
     width: 500px;
     height: 500px;
     margin: 100px 0 0 40px;
@@ -62,12 +63,13 @@ button {
 }
 
 .photo-body img {
-    width: auto;
+    width: 100%;
     height: 300px;
-    margin-top: 5px;
+    margin-top: 15px;
 }
 
 .photo-panel {
+    display: none;
     position: absolute;
     width: 400px;
     height: auto;
@@ -76,7 +78,9 @@ button {
     transform: translate(-50%, -50%);
     text-align: center;
     border-radius: 5px;
+    color: black;
     box-shadow: 0 0 10px white;
+    background-color: rgb(169, 211, 101);
 }
 
 .photo-panel h3 {
@@ -94,6 +98,12 @@ button {
     margin: 0 auto;
 }
 
+.photo-panel select {
+    width: 50%;
+    font-size: 16px;
+    line-height: 18px;
+}
+
 .photo-panel [type="date"] {
     width: 50%;
 }
@@ -104,8 +114,15 @@ button {
 
 .photo-panel .error {
     margin: 10px;
+    color: tomato;
+    visibility: hidden;
 }
 
 .photo-panel .photo-icons {
     margin: 10px;
+}
+
+.photo-panel .image-box img {
+    width: 100%;
+    height: 300px;
 }
