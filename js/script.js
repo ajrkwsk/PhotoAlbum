@@ -15,7 +15,7 @@ const imageBox = document.querySelector('.image-box');
 let file = document.querySelector('#file');
 const image = document.createElement('img');
 
-let photoID;
+let photoID = 0;
 let selectedValue;
 let resultPhoto;
 
@@ -28,8 +28,8 @@ const cancelPhoto = () => {
     country.value = '';
     city.value = '';
     date.value = '';
-    file.name = '';
     continent.value = '0';
+    image.value = '';
 }
 
 const savePhoto = () => {
@@ -59,7 +59,6 @@ const createPhoto = () => {
                         <img src="${image.src}" alt="zdjęcie">
                     </div>
                 </div>`;
-
     photoArea.appendChild(newPhoto);
     photoID++;
     continent.value = '0';
@@ -67,6 +66,7 @@ const createPhoto = () => {
     city.value = '';
     date.value = '';
     photoPanel.style.display = 'none';
+    image.value = '';
 }
 
 const previewFile = () => {
@@ -75,13 +75,12 @@ const previewFile = () => {
     
     if(file) {
         const reader = new FileReader();
-        
         reader.addEventListener('load', function() {
             image.setAttribute("src", this.result)
         });
-        
         resultPhoto = reader.readAsDataURL(file);
     }
+    imageBox.style.display = 'none';
 }
 
 const deleteAll = () => {
