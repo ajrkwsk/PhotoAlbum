@@ -13,36 +13,47 @@
         <h1><i class="fas fa-camera-retro"></i> MyPhotoAlbum</h1>
         <div class="icon">
             <button class="add-btn">dodaj zdjęcie</button>
-            <button class="deteleAll-btn">usuń wszystko</button>
+            <button class="deleteAll-btn">usuń wszystko</button>
         </div>
     </header>
 
     <main>
         <section class="photo-area">
-            <div class="photo">
+            <!-- <div class="photo">
                 <div class="photo-header">
-                    <h2 class="photo-title">Podróż#1</h2>
+                    <h2 class="continent">Azja</h2>
                     <i class="far fa-times-circle"></i>
                 </div>
                 <div class="photo-body">
-                    <p class="country">Państwo: Indie</p>
-                    <p class="city">Miasto: New Delhi</p>
-                    <p class="date">Data: 17-10-2018</p>
-                    <img src="https://cdn.pixabay.com/photo/2019/03/09/21/30/downtown-4045036_960_720.jpg" alt="zdjęcie">
+                    <p>Państwo: Indie</p>
+                    <p>Miasto: New Delhi</p>
+                    <p>Data: 2018-10-17</p>
+                    <img src="https://cdn.pixabay.com/photo/2019/03/12/20/19/india-4051753_960_720.jpg" alt="zdjęcie">
                 </div>
-            </div>
+            </div> -->
         </section>
 
         <section>
             <div class="photo-panel">
                 <h3>Dodaj nową podróż</h3>
-                <input type="text" placeholder="podaj tytuł" required><br>
-                <input type="text" placeholder="podaj kraj" required><br>
-                <input type="text" placeholder="podaj miasto" required><br>
-                <input type="date" placeholder="podaj datę" required><br>
-                <input type="file">
+                <label for="continent"></label>
+                <select id="continent">
+                    <option value="0" selected disabled>-wybierz kontynent-</option>
+                    <option value="Europa">Europa</option>
+                    <option value="Azja">Azja</option>
+                    <option value="Ameryka Północna">Ameryka Północna</option>
+                    <option value="Ameryka Południowa">Ameryka Południowa</option>
+                    <option value="Afryka">Afryka</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Antarktyda">Antarktyda</option>
+                </select>
+                <input id="country" type="text" placeholder="podaj państwo" required><br>
+                <input id="city" type="text" placeholder="podaj miasto" required><br>
+                <input id="date" type="date" required><br>
+                <input id="file" type="file" accept="image/*" onchange="previewFile()">
+                <div class="image-box"></div>
 
-                <p class="error">Uzupełnij wszystkie pola</p>
+                <p class="error">Musisz wypełnić wszystkie pola!</p>
                 <div class="photo-icons">
                     <button class="save-btn">Zapisz</button>
                     <button class="cancel-btn">Anuluj</button>
