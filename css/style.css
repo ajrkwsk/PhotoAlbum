@@ -14,11 +14,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 100px 0 100px;
+    margin: 50px;
 }
 
 .title {
-    display: flex;
+    font-size: 45px;
     color: rgb(99, 209, 26);
 }
 
@@ -27,34 +27,43 @@ header {
 }
 
 button {
-    margin: 5px 5px 0 5px;
-    padding: 10px 20px;
+    margin: 10px 3px;
+    padding: 10px 25px;
+    font-size: 20px;
+    font-weight: 600;
     text-transform: uppercase;
     color: black;
     background-color: rgb(145, 209, 49);
     border-radius: 5px;
+    border-color: rgb(126, 113, 113);
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(73, 134, 12);
+    color: white;
 }
 
 .photo-area {
-    margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
 }
 
 .photo {
     display: inline-block;
-    width: 500px;
-    height: 500px;
-    margin: 100px 0 0 40px;
+    width: 33,3%;
+    height: auto;
+    margin: 50px;
     border: 5px solid white;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .photo-header {
     display: flex;
     margin: 15px;
+    font-size: 24px;
     justify-content: space-between;
     align-items: center;
 }
@@ -65,73 +74,74 @@ button {
 
 .photo-header .far {
     padding: 10px;
-    font-size: 25px;
+    font-size: 35px;
     color: rgb(145, 209, 49);
     cursor: pointer;
 }
 
-.photo-body {
-    padding: 5px;
-}
-
 .photo-body p {
     text-align: center;
-    font-size: 18px;
+    font-size: 26px;
 }
 
 .photo-body img {
-    width: 100%;
-    height: 300px;
     margin-top: 15px;
+    width: 100%;
+    padding: 0 5px;
+    height: auto;
+    max-height: 300px;
 }
 
 .photo-panel {
     display: none;
     position: absolute;
-    width: 400px;
+    width: 700px;
     height: auto;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    border-radius: 5px;
-    color: black;
-    box-shadow: 0 0 10px white;
+    border-radius: 10px;
+    color: rgb(15, 14, 14);
+    box-shadow: 0 0 10px rgb(219, 211, 211);
     background-color: rgb(169, 211, 101);
 }
 
 .photo-panel h3 {
     margin: 20px;
+    font-size: 30px;
 }
 
 .photo-panel input {
-    margin: 50px;
-    padding: 2px;
-    font-size: 16px;
-}
-
-.photo-panel input {
-    width: 90%;
-    margin: 0 auto;
+    margin: 3px 0;
+    padding: 5px;
+    font-size: 20px;
+    width: 80%;
 }
 
 .photo-panel select {
-    width: 50%;
-    font-size: 16px;
-    line-height: 18px;
+    margin: 3px 0;
+    width: 40%;
+    height: 40px;
+    font-size: 20px;
 }
 
 .photo-panel [type="date"] {
     width: 50%;
+    font-size: 20px;
 }
 
 .photo-panel [type="file"] {
     width: 70%;
+    height: 30px;
+    margin: 3px auto;
+    border: rgb(15, 14, 14);
 }
 
 .photo-panel .error {
-    margin: 10px;
-    color: tomato;
+    margin: 15px 0;
+    font-size: 20px;
+    color: rgb(226, 55, 25);
     visibility: hidden;
 }
 
@@ -139,15 +149,52 @@ button {
     margin: 10px;
 }
 
-.image-box img {
-    width: 100%;
-    height: 300px;
+@media (max-width: 935px) {
+    .title {
+        font-size: 30px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+    .photo-header {
+        font-size: 20px;
+    }
+
+    .photo p {
+        font-size: 22px;
+    }
+
+    .photo-panel {
+        width: 80%;
+    }
+
+    .photo-panel h3 {
+        font-size: 25px;
+    }
+
+    .photo-panel input {
+        font-size: 17px;
+    }
+
+    .photo-panel select {
+        font-size: 17px;
+    }
+    
+    .photo-panel [type="date"] {
+        font-size: 17px;
+    }
+
 }
 
 @media (max-width: 768px) {
     header {
-        display: inline-block;
-        width: 100%;
+        display: inline;
+    }
+
+    .title {
+        display: flex;
         align-items: center;
         justify-content: center;
     }
@@ -157,24 +204,69 @@ button {
     }
 
     .photo-area {
-        width: 90vw;
-        height: auto;
-        margin: 0 auto;
+        width: 90%;
     }
 
-    .image-box img {
-        width: 100%;
-        height: auto;
+    .photo-panel select {
+        width: 80%;
+    }
+
+    .photo-panel [type="file"] {
+        width: 80%;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 390px) {
+    .title {
+        font-size: 30px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+    .photo-header {
+        font-size: 18px;
     }
 
     .photo {
-        width: 90vw;
-        height: auto;
-        margin-left: 0;
-        padding-left: 0;
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .photo p {
+        font-size: 20px;
     }
 
     .photo-panel {
-        width: 90%;
+        width: 80%;
+    }
+
+    .photo-panel h3 {
+        font-size: 22px;
+    }
+
+    .photo-panel input {
+        font-size: 15px;
+    }
+
+    .photo-panel select {
+        font-size: 15px;
+        width: 80%;
+    }
+    
+    .photo-panel [type="date"] {
+        width: 80%;
+        font-size: 15px;
+    }
+
+    .photo-panel [type="file"] {
+        font-size: 15px;
+        width: auto;
+    }
+
+    .photo-panel .error {
+        font-size: 16px;
     }
 }
